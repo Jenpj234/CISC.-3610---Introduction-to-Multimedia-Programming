@@ -1,0 +1,114 @@
+h1,
+h2,
+h3 {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 50px;
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+* {
+  text-align: center;
+}
+
+body {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+hr {
+  border: none;
+  border: 5px solid green;
+  border-radius: 5px; /* Adds rounded corners */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p,
+li {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.italics {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.button {
+  background: linear-gradient(135deg, #4caf50, #2e7d32); /* Green gradient */
+  color: white;
+  padding: 12px 24px;
+  margin: 12px;
+  font-size: 25px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.button:hover {
+  background: linear-gradient(135deg, #66bb6a, #388e3c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus for accessibility */
+.button:focus {
+  outline: 3px solid rgba(76, 175, 80, 0.5);
+  outline-offset: 2px;
+}
+
+/* Active click effect */
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.links {
+  color: white;
+}
+
+img {
+  display: block;
+  margin: 30px auto;
+}
+
+.connect h2 h3 {
+  margin-bottom: 25px;
+}
+
+.connect {
+  margin-top: 40px;
+}
