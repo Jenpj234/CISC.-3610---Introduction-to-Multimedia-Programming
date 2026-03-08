@@ -115,5 +115,21 @@ img {
 
 iframe {
   display: block;
-  margin: 20px auto;
+  margin: 0 auto;
+}
+
+.assignment-preview {
+  width: 960px;
+  height: 435px; /* match scaled iframe height */
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.assignment-title {
+  margin-bottom: 5px;
+}
+
+.assignment-description {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
