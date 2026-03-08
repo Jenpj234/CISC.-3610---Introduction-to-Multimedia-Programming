@@ -112,3 +112,8 @@ img {
 .connect {
   margin-top: 40px;
 }
+
+iframe {
+  display: block;
+  margin: 20px auto;
+}
