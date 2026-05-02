@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary Lab</title>
+  </head>
+  <body>
+    <label for="word">Choose a word:</label>
+    <select name="word" id="word-select" onchange="displaySentence()">
+      <option>--Select--</option>
+      <option
+        value="college"
+        data-sentence="Brooklyn College has such a diverse population."
+      >
+        college
+      </option>
+      <option value="student" data-sentence="Each student has a major.">
+        student
+      </option>
+      <option
+        value="life"
+        data-sentence="A work-life balance is crucial to succeed in college."
+      >
+        life
+      </option>
+      <option
+        value="campus"
+        data-sentence="Campus is currently undergoing renovations."
+      >
+        campus
+      </option>
+      <option value="job" data-sentence="It's hard to find a job nowadays.">
+        job
+      </option>
+    </select>
+    <button class="js-word-button">Speak Word</button>
+
+    <p></p>
+
+    <textarea name="sentence" id="sentence-text-area" readonly></textarea>
+    <button class="js-sentence-button">Speak Sentence</button>
+
+    <script src="dictionary.js"></script>
+  </body>
+</html>

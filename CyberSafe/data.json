@@ -1,0 +1,52 @@
+{
+  "topics": [
+    {
+      "title": "Phishing",
+      "description": "Phishing is a cyber-attack where scammers pretend to be trusted organizations (like your bank or Google) to trick you into giving away sensitive info like passwords or credit card numbers. They usually strike via email, text, or fake websites.",
+      "prevention": "Never click suspicious links. Always verify the sender's email address. Go directly to websites by typing the URL instead of clicking links.",
+      "image": "images/phishing.jpg",
+      "audio": "audio/phishing.mp3",
+      "icon": "🎣"
+    },
+    {
+      "title": "Malware",
+      "description": "Malware (malicious software) is any program designed to damage, disrupt, or gain unauthorized access to your computer. It includes viruses, spyware, trojans, and more. It can steal your data, spy on you, or crash your system.",
+      "prevention": "Install reputable antivirus software. Avoid downloading files from untrusted sources. Keep your operating system and apps updated.",
+      "image": "images/malware.jpg",
+      "audio": "audio/malware.mp3",
+      "icon": "🦠"
+    },
+    {
+      "title": "Ransomware",
+      "description": "Ransomware is a type of malware that locks or encrypts your files and demands payment (a ransom) to restore access. Victims are often businesses, hospitals, or individuals who can't afford to lose their data.",
+      "prevention": "Regularly back up your data to an external drive or cloud. Never open email attachments from unknown senders. Use strong endpoint security tools.",
+      "image": "images/ransomware.png",
+      "audio": "audio/ransomware.mp3",
+      "icon": "🔒"
+    },
+    {
+      "title": "Social Engineering",
+      "description": "Social engineering manipulates people psychologically into revealing confidential information or performing actions that compromise security. Attackers exploit trust, urgency, or fear rather than technical vulnerabilities.",
+      "prevention": "Be skeptical of unsolicited requests for info. Verify identities before sharing anything. Educate yourself and others about common manipulation tactics.",
+      "image": "images/social-engineering.png",
+      "audio": "audio/social-engineering.mp3",
+      "icon": "🎭"
+    },
+    {
+      "title": "Password Attacks",
+      "description": "Attackers use techniques like brute force (trying every combination), dictionary attacks, or credential stuffing (using leaked passwords) to break into accounts. Weak or reused passwords are extremely vulnerable.",
+      "prevention": "Use long, unique passwords for every account. Enable two-factor authentication (2FA). Use a password manager to keep track of them securely.",
+      "image": "images/passwords.png",
+      "audio": "audio/passwords.mp3",
+      "icon": "🔑"
+    },
+    {
+      "title": "Man-in-the-Middle (MitM)",
+      "description": "In a MitM attack, a hacker secretly intercepts communication between two parties — like you and your bank — to eavesdrop or alter the data being sent. This often happens on unsecured public Wi-Fi networks.",
+      "prevention": "Avoid using public Wi-Fi for sensitive transactions. Use a VPN. Look for HTTPS in website URLs before entering any personal data.",
+      "image": "images/mitm.png",
+      "audio": "audio/mitm.mp3",
+      "icon": "👤"
+    }
+  ]
+}

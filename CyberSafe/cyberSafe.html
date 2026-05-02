@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberSafe</title>
+    <link rel="icon" href="images/cyber-criminal.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="cyberSafe.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Cyber<span class="accent">Safe</span></h1>
+        <p class="tagline">Know the Threats. Stay Protected.</p>
+      </div>
+      <div class="hero-actions">
+        <img src="images/cyber-criminal.png" alt="Cyber Criminal" class="hero-img" />
+        <button id="install-btn" class="install-btn" hidden>
+          ⬇️ Install App
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="topic-selector">
+        <h2>Common Cyber Threats</h2>
+        <p class="subtitle">Select a threat below to learn how it works and how to defend yourself.</p>
+
+        <select name="cyber-threats-menu" id="cyber-threats-selector">
+          <option value="">-- Select a Cyber Threat --</option>
+        </select>
+      </section>
+
+      <section class="topic-card" id="topic-card" hidden>
+        <div class="card-header">
+          <span class="topic-icon" id="topic-icon"></span>
+          <h3 id="title"></h3>
+        </div>
+        <img id="topic-image" src="" alt="" />
+        <div class="card-body">
+          <div class="info-block">
+            <h4>⚠️ What is it?</h4>
+            <p id="description"></p>
+          </div>
+          <div class="info-block prevention">
+            <h4>🛡️ How to Prevent It</h4>
+            <p id="prevention"></p>
+          </div>
+        </div>
+        <audio id="topic-audio" controls></audio>
+      </section>
+    </main>
+
+    <footer>
+      <p>CyberSafe PWA &mdash; Stay safe online 🔐</p>
+    </footer>
+
+    <script src="cyberSafe.js"></script>
+  </body>
+</html>
