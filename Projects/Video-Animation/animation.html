@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Animation — Jennifer Perez-Juarez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="animation.css">
+</head>
+<body>
+
+  <h1>Video <em>Animation</em></h1>
+
+  <div class="video-wrapper">
+    <!-- 🎬 Update src if your filename is different -->
+    <video controls autoplay muted loop playsinline>
+      <source src="animation.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="video-meta">
+    <div class="meta-item">
+      <span class="meta-label">Tool</span>
+      <span class="meta-value">Wick Editor</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Frame Rate</span>
+      <span class="meta-value">30 fps</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Layers</span>
+      <span class="meta-value">Background · Middle · Foreground</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Duration</span>
+      <span class="meta-value">3 seconds</span>
+    </div>
+  </div>
+
+  <div class="download-actions">
+    <!-- 📁 Update href to your actual .wick filename -->
+    <a href="animation.wick" download class="btn btn-light">⬇ Download .wick</a>
+    <a href="animation.mp4" download class="btn btn-outline">⬇ Download MP4</a>
+  </div>
+
+</body>
+</html>

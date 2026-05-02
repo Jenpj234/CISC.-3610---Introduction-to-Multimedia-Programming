@@ -1,0 +1,118 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0e0f11;
+      color: #e8e8e6;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      gap: 2rem;
+    }
+
+    h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      color: #e8e8e6;
+      text-align: center;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: #555;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      max-width: 860px;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      display: block;
+    }
+
+    .video-meta {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .meta-label {
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #444;
+    }
+
+    .meta-value {
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .download-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .btn-light {
+      background: #e8e8e6;
+      color: #0e0f11;
+    }
+
+    .btn-light:hover {
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #888;
+      border: 1px solid #2a2b2f;
+    }
+
+    .btn-outline:hover {
+      border-color: #555;
+      color: #e8e8e6;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 3rem 1.2rem; }
+    }
