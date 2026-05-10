@@ -1,288 +1,428 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jennifer Perez-Juarez — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jennifer Perez-Juarez — Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-name">Jennifer Perez-Juarez</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#assignments">Assignments</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://github.com/Jenpj234" target="_blank">GitHub ↗</a>
+        </li>
+      </ul>
+    </nav>
 
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-name">Jennifer Perez-Juarez</a>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#assignments">Assignments</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="https://github.com/Jenpj234" target="_blank">GitHub ↗</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-left">
-      <div class="hero-tag">CISC 3610 · Multimedia Programming</div>
-      <h1>Jennifer<br><em>Perez-Juarez</em></h1>
-      <p class="hero-bio">
-        Computer Science student with a minor in Data Science. I build interactive web experiences — from canvas animations to full Progressive Web Apps.
-      </p>
-      <div class="hero-meta">
-        <div class="meta-item">
-          <span class="meta-label">Major</span>
-          <span class="meta-value">Computer Science</span>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-tag">CISC 3610 · Multimedia Programming</div>
+        <h1>Jennifer<br /><em>Perez-Juarez</em></h1>
+        <p class="hero-bio">
+          Computer Science student with a minor in Data Science. I build
+          interactive web experiences — from canvas animations to full
+          Progressive Web Apps.
+        </p>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-label">Major</span>
+            <span class="meta-value">Computer Science</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Minor</span>
+            <span class="meta-value">Data Science</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Focus</span>
+            <span class="meta-value">Web Development</span>
+          </div>
         </div>
-        <div class="meta-item">
-          <span class="meta-label">Minor</span>
-          <span class="meta-value">Data Science</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">Focus</span>
-          <span class="meta-value">Web Development</span>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-filled">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
       </div>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-filled">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
-      </div>
-    </div>
 
-    <div class="hero-right">
-      <div class="photo-frame">
-        <!-- 📸 Replace src with your actual photo path -->
-        <img src="images/jennifer.jpg" alt="Jennifer Perez-Juarez"
-          onerror="this.style.display='none'; this.parentElement.style.background='#1a1b1f'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';" />
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects-section" id="projects">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <h2 class="section-title">Projects</h2>
-      <div class="section-line"></div>
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- FEATURED: CyberSafe PWA -->
-      <div class="project-card featured">
-        <div class="project-preview">
-          <!-- 📸 Replace with screenshot of CyberSafe -->
-          <img src="CyberSafe/images/screenshots/hero.jpeg" alt="CyberSafe PWA"
-            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'preview-placeholder\'>🔐</div>';" />
+      <div class="hero-right">
+        <div class="photo-frame">
+          <!-- 📸 Replace src with your actual photo path -->
+          <img
+            src="images/jennifer.jpg"
+            alt="Jennifer Perez-Juarez"
+            onerror="
+              this.style.display = 'none';
+              this.parentElement.style.background = '#1a1b1f';
+              this.parentElement.style.display = 'flex';
+              this.parentElement.style.alignItems = 'center';
+              this.parentElement.style.justifyContent = 'center';
+            "
+          />
         </div>
-        <div class="project-content">
-          <span class="featured-label">✦ Featured Project</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects-section" id="projects">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- FEATURED: CyberSafe PWA -->
+        <div class="project-card featured">
+          <div class="project-preview">
+            <!-- 📸 Replace with screenshot of CyberSafe -->
+            <img
+              src="CyberSafe/images/screenshots/hero.jpeg"
+              alt="CyberSafe PWA"
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.innerHTML =
+                  '<div class=\'preview-placeholder\'>🔐</div>';
+              "
+            />
+          </div>
+          <div class="project-content">
+            <span class="featured-label">✦ Featured Project</span>
+            <div class="project-top">
+              <span class="project-tag">PWA</span>
+              <span class="project-arrow">↗</span>
+            </div>
+            <div class="project-name">CyberSafe</div>
+            <p class="project-desc">
+              An interactive Progressive Web App that teaches users about common
+              cybersecurity threats — phishing, malware, ransomware, and more.
+              Fully installable, works offline, and includes audio narration for
+              each topic.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">HTML5</span>
+              <span class="stack-tag">CSS3</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">Service Worker</span>
+              <span class="stack-tag">Web Manifest</span>
+            </div>
+            <div style="display: flex; gap: 0.8rem; margin-top: 0.5rem">
+              <a
+                href="CyberSafe/cyberSafe.html"
+                target="_blank"
+                class="btn btn-filled"
+                style="padding: 0.6rem 1.4rem; font-size: 0.82rem"
+                >Launch App →</a
+              >
+              <a
+                href="CyberSafe/promo.html"
+                target="_blank"
+                class="btn btn-outline"
+                style="padding: 0.6rem 1.4rem; font-size: 0.82rem"
+                >Promo Page</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Cartoon -->
+        <div class="project-card">
           <div class="project-top">
-            <span class="project-tag">PWA</span>
+            <span class="project-tag">Canvas API</span>
             <span class="project-arrow">↗</span>
           </div>
-          <div class="project-name">CyberSafe</div>
+          <div class="project-preview">
+            <!-- 📸 Replace with screenshot -->
+            <img
+              src="images/screenshots/cartoon-preview.jpeg"
+              alt="Canvas Cartoon"
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.innerHTML =
+                  '<div class=\'preview-placeholder\'>🎨</div>';
+              "
+            />
+          </div>
+          <div class="project-name">Canvas Cartoon</div>
           <p class="project-desc">
-            An interactive Progressive Web App that teaches users about common cybersecurity threats — phishing, malware, ransomware, and more. Fully installable, works offline, and includes audio narration for each topic.
+            An animated cartoon scene drawn entirely with the HTML5 Canvas API —
+            no external libraries, just code and creativity.
           </p>
           <div class="project-stack">
             <span class="stack-tag">HTML5</span>
-            <span class="stack-tag">CSS3</span>
+            <span class="stack-tag">Canvas API</span>
             <span class="stack-tag">JavaScript</span>
-            <span class="stack-tag">Service Worker</span>
-            <span class="stack-tag">Web Manifest</span>
           </div>
-          <div style="display:flex; gap: 0.8rem; margin-top: 0.5rem;">
-            <a href="CyberSafe/cyberSafe.html" target="_blank" class="btn btn-filled" style="padding: 0.6rem 1.4rem; font-size:0.82rem;">Launch App →</a>
-            <a href="CyberSafe/promo.html" target="_blank" class="btn btn-outline" style="padding: 0.6rem 1.4rem; font-size:0.82rem;">Promo Page</a>
+          <div class="card-actions">
+            <!-- 🔗 Replace href with your actual cartoon project file -->
+            <a
+              href="Projects/Cartoons/cartoon.html"
+              target="_blank"
+              class="btn btn-filled"
+              >Launch →</a
+            >
+          </div>
+        </div>
+
+        <!-- Words -->
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-tag">Web Speech API</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <div class="project-preview">
+            <!-- 📸 Replace with screenshot -->
+            <img
+              src="images/screenshots/words-preview.jpeg"
+              alt="Canvas Cartoon"
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.innerHTML =
+                  '<div class=\'preview-placeholder\'>🎨</div>';
+              "
+            />
+          </div>
+          <div class="project-name">Words</div>
+          <p class="project-desc">
+            A text-to-speech web app using the Web Speech API. Select a word or
+            type a sentence and hear it spoken aloud instantly.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML5</span>
+            <span class="stack-tag">Web Speech API</span>
+            <span class="stack-tag">JavaScript</span>
+          </div>
+          <div class="card-actions">
+            <!-- 🔗 Replace href with your actual words project file -->
+            <a
+              href="Projects/Words/dictionary.html"
+              target="_blank"
+              class="btn btn-filled"
+              >Launch →</a
+            >
+          </div>
+        </div>
+
+        <!-- Video Animation -->
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-tag">Animation</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <div class="project-preview">
+            <!-- Auto-plays silently as a preview in the card -->
+            <video
+              src="Projects/Video-Animation/animation.mp4"
+              muted
+              autoplay
+              loop
+              playsinline
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                background: var(--bg);
+              "
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.innerHTML =
+                  '<div class=\'preview-placeholder\'>🎬</div>';
+              "
+            ></video>
+          </div>
+          <div class="project-name">Video Animation</div>
+          <p class="project-desc">
+            A canvas-based animated scene with programmatic motion, timing, and
+            layered visual elements.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML5</span>
+            <span class="stack-tag">Canvas API</span>
+            <span class="stack-tag">JavaScript</span>
+          </div>
+          <div class="card-actions">
+            <!-- Links directly to the MP4 — browser plays it natively -->
+            <a
+              href="Projects/Video-Animation/animation.html"
+              target="_blank"
+              class="btn btn-filled"
+              >Launch →</a
+            >
+          </div>
+        </div>
+
+        <!-- Placeholder for future project -->
+      </div>
+    </section>
+
+    <!-- ASSIGNMENTS -->
+    <section id="assignments" style="padding: 7rem 4rem">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Assignments</h2>
+        <div class="section-line"></div>
+      </div>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5px;
+          border: 1.5px solid var(--border);
+          border-radius: 8px;
+          overflow: hidden;
+        "
+      >
+        <!-- Assignment 1 — replace with your actual assignments -->
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-tag">Assignment 1</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <div class="project-preview">
+            <div class="preview-placeholder">
+              <img src="images/screenshots/bootstrap.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="project-name">Bootstrap</div>
+          <p class="project-desc">Simple page that handles BootStrap grids.</p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML5</span>
+            <span class="stack-tag">CSS3</span>
+            <span class="stack-tag">Bootstrap</span>
+            <span class="stack-tag">JavaScript</span>
+          </div>
+          <div class="card-actions">
+            <a
+              href="Assignments/bootstrap.html"
+              target="_blank"
+              class="btn btn-filled"
+              >View →</a
+            >
+          </div>
+        </div>
+
+        <!-- Assignment 2 -->
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-tag">Assignment 2</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <div class="project-preview">
+            <div class="preview-placeholder">
+              <img src="images/screenshots/videoLab.png" alt="" />
+            </div>
+          </div>
+          <div class="project-name">Video Lab</div>
+          <p class="project-desc">
+            Web page containing 3 embeded YouTube videos using iframe.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML5</span>
+          </div>
+          <div class="card-actions">
+            <a
+              href="Assignments/videoLab.html"
+              target="_blank"
+              class="btn btn-filled"
+              >View →</a
+            >
+          </div>
+        </div>
+
+        <!-- Assignment 3 -->
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-tag">Assignment 3</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <div class="project-preview">
+            <div class="preview-placeholder">
+              <img src="images/screenshots/resumeLab.png" alt="" />
+            </div>
+          </div>
+          <div class="project-name">Resume Lab</div>
+          <p class="project-desc">Built my resume using BootStrap.</p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML5</span>
+            <span class="stack-tag">CSS3</span>
+            <span class="stack-tag">Bootstrap</span>
+            <span class="stack-tag">JavaScript</span>
+          </div>
+          <div class="card-actions">
+            <a
+              href="Assignments/resumeLab.html"
+              target="_blank"
+              class="btn btn-filled"
+              >View →</a
+            >
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Cartoon -->
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-tag">Canvas API</span>
-          <span class="project-arrow">↗</span>
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-inner">
+        <p>
+          I'm currently a student at CUNY studying Computer Science. Feel free
+          to reach out if you want to connect, collaborate, or just say hi.
+        </p>
+        <div class="email-block">
+          <a href="mailto:Jenniferperez.6190@gmail.com"
+            >Jenniferperez.6190@gmail.com</a
+          >
+          <a href="mailto:Jennifer.perez-juarez12@bcmail.cuny.edu"
+            >Jennifer.perez-juarez12@bcmail.cuny.edu</a
+          >
         </div>
-        <div class="project-preview">
-          <!-- 📸 Replace with screenshot -->
-          <img src="images/screenshots/cartoon-preview.jpeg" alt="Canvas Cartoon"
-            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'preview-placeholder\'>🎨</div>';" />
-        </div>
-        <div class="project-name">Canvas Cartoon</div>
-        <p class="project-desc">An animated cartoon scene drawn entirely with the HTML5 Canvas API — no external libraries, just code and creativity.</p>
-        <div class="project-stack">
-          <span class="stack-tag">HTML5</span>
-          <span class="stack-tag">Canvas API</span>
-          <span class="stack-tag">JavaScript</span>
-        </div>
-        <div class="card-actions">
-          <!-- 🔗 Replace href with your actual cartoon project file -->
-          <a href="Cartoons/cartoon.html" target="_blank" class="btn btn-filled">Launch →</a>
+        <div class="contact-links">
+          <a
+            href="http://www.linkedin.com/in/jennifer-perez-juarez"
+            target="_blank"
+            class="contact-link"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+              />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/Jenpj234"
+            target="_blank"
+            class="contact-link"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              />
+            </svg>
+            GitHub
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- Words -->
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-tag">Web Speech API</span>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div class="project-preview">
-          <!-- 📸 Replace with screenshot -->
-          <img src="images/screenshots/words-preview.jpeg" alt="Canvas Cartoon"
-            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'preview-placeholder\'>🎨</div>';" />
-        </div>
-        <div class="project-name">Words</div>
-        <p class="project-desc">A text-to-speech web app using the Web Speech API. Select a word or type a sentence and hear it spoken aloud instantly.</p>
-        <div class="project-stack">
-          <span class="stack-tag">HTML5</span>
-          <span class="stack-tag">Web Speech API</span>
-          <span class="stack-tag">JavaScript</span>
-        </div>
-        <div class="card-actions">
-          <!-- 🔗 Replace href with your actual words project file -->
-          <a href="Words/dictionary.html" target="_blank" class="btn btn-filled">Launch →</a>
-        </div>
-      </div>
-
-      <!-- Video Animation -->
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-tag">Animation</span>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div class="project-preview">
-          <!-- Auto-plays silently as a preview in the card -->
-          <video
-            src="Video-Animation/animation.mp4"
-            muted autoplay loop playsinline
-            style="width:100%; height:100%; object-fit:contain; background:var(--bg);"
-            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'preview-placeholder\'>🎬</div>';">
-          </video>
-        </div>
-        <div class="project-name">Video Animation</div>
-        <p class="project-desc">A canvas-based animated scene with programmatic motion, timing, and layered visual elements.</p>
-        <div class="project-stack">
-          <span class="stack-tag">HTML5</span>
-          <span class="stack-tag">Canvas API</span>
-          <span class="stack-tag">JavaScript</span>
-        </div>
-        <div class="card-actions">
-          <!-- Links directly to the MP4 — browser plays it natively -->
-          <a href="Video-Animation/animation.html" target="_blank" class="btn btn-filled">Launch →</a>
-        </div>
-      </div>
-
-      <!-- Placeholder for future project -->
-
-    </div>
-  </section>
-
-  <!-- ASSIGNMENTS -->
-  <section id="assignments" style="padding: 7rem 4rem;">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <h2 class="section-title">Assignments</h2>
-      <div class="section-line"></div>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden;">
-
-      <!-- Assignment 1 — replace with your actual assignments -->
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-tag">Assignment 1</span>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div class="project-preview">
-          <div class="preview-placeholder">📝</div>
-        </div>
-        <div class="project-name">Bootstrap</div>
-        <p class="project-desc">Brief description of what this assignment covers.</p>
-        <div class="project-stack">
-          <span class="stack-tag">HTML5</span>
-          <span class="stack-tag">JavaScript</span>
-        </div>
-        <div class="card-actions">
-          <a href="#" target="_blank" class="btn btn-filled">View →</a>
-        </div>
-      </div>
-
-      <!-- Assignment 2 -->
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-tag">Assignment 2</span>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div class="project-preview">
-          <div class="preview-placeholder">📝</div>
-        </div>
-        <div class="project-name">Video Lab</div>
-        <p class="project-desc">Brief description of what this assignment covers.</p>
-        <div class="project-stack">
-          <span class="stack-tag">HTML5</span>
-          <span class="stack-tag">JavaScript</span>
-        </div>
-        <div class="card-actions">
-          <a href="#" target="_blank" class="btn btn-filled">View →</a>
-        </div>
-      </div>
-
-      <!-- Assignment 3 -->
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-tag">Assignment 3</span>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div class="project-preview">
-          <div class="preview-placeholder">📝</div>
-        </div>
-        <div class="project-name">Resume Lab</div>
-        <p class="project-desc">Brief description of what this assignment covers.</p>
-        <div class="project-stack">
-          <span class="stack-tag">HTML5</span>
-          <span class="stack-tag">JavaScript</span>
-        </div>
-        <div class="card-actions">
-          <a href="#" target="_blank" class="btn btn-filled">View →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact-section" id="contact">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <h2 class="section-title">Get in Touch</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="contact-inner">
-      <p>I'm currently a student at CUNY studying Computer Science. Feel free to reach out if you want to connect, collaborate, or just say hi.</p>
-      <div class="email-block">
-        <a href="mailto:Jenniferperez.6190@gmail.com">Jenniferperez.6190@gmail.com</a>
-        <a href="mailto:Jennifer.perez-juarez12@bcmail.cuny.edu">Jennifer.perez-juarez12@bcmail.cuny.edu</a>
-      </div>
-      <div class="contact-links">
-        <a href="http://www.linkedin.com/in/jennifer-perez-juarez" target="_blank" class="contact-link">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com/Jenpj234" target="_blank" class="contact-link">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          GitHub
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 <span>Jennifer Perez-Juarez</span>. All rights reserved.</p>
-    <p>CISC 3610 · <span>Introduction to Multimedia Programming</span></p>
-  </footer>
-
-</body>
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 <span>Jennifer Perez-Juarez</span>. All rights reserved.</p>
+      <p>CISC 3610 · <span>Introduction to Multimedia Programming</span></p>
+    </footer>
+  </body>
 </html>

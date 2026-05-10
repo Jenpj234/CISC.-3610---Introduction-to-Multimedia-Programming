@@ -1,0 +1,403 @@
+:root {
+  --accent: #1a6b55;
+  --accent-light: #e1f5ee;
+  --accent-mid: #1d9e75;
+  --text-primary: #1a1a1a;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --surface: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text-primary);
+  background: #fff;
+  font-size: 16px;
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: var(--accent) !important;
+  padding: 0.75rem 0;
+}
+.navbar-brand {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.25rem;
+  color: #fff !important;
+  letter-spacing: 0.01em;
+}
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.nav-link:hover {
+  color: #fff !important;
+}
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, var(--accent) 0%, #0f6e56 100%);
+  color: #fff;
+  padding: 4rem 0 3rem;
+}
+.hero h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  margin-bottom: 0.5rem;
+}
+.hero .tagline {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+/* ── Sections ── */
+section {
+  padding: 3rem 0;
+}
+section:nth-child(even) {
+  background: var(--surface);
+}
+
+h2.section-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+/* ── Contact pills ── */
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 9999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.contact-pill:hover {
+  background: #9fe1cb;
+  color: #085041;
+}
+.contact-pill svg {
+  flex-shrink: 0;
+}
+
+/* ── Education card ── */
+.edu-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: #fff;
+}
+.edu-card .degree {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.1rem;
+}
+.gpa-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 6px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.tag {
+  display: inline-block;
+  background: #f3f4f6;
+  color: var(--text-muted);
+  border-radius: 6px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.78rem;
+  margin: 0.15rem;
+}
+
+/* ── Experience carousel ── */
+#exp-carousel {
+  position: relative;
+}
+
+.exp-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-card-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.5rem 1.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.company-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Serif Display", serif;
+  font-size: 1.25rem;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.exp-card-header .role {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.15rem;
+  margin: 0;
+  line-height: 1.25;
+}
+.exp-card-header .company-line {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 0.15rem 0 0;
+}
+.exp-badge {
+  margin-left: auto;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+.exp-badge span {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.exp-card-body {
+  padding: 1.5rem 1.75rem;
+  flex: 1;
+}
+.exp-card-body ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.exp-card-body li {
+  margin-bottom: 0.6rem;
+  color: #374151;
+  line-height: 1.55;
+  font-size: 0.93rem;
+}
+.exp-card-body li:last-child {
+  margin-bottom: 0;
+}
+
+.status-pill {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+.status-incoming {
+  background: #fef3c7;
+  color: #92400e;
+}
+.status-completed {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 42px;
+  height: 42px;
+  background: var(--accent);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  position: absolute;
+}
+.carousel-control-prev {
+  left: -54px;
+}
+.carousel-control-next {
+  right: -54px;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: #0f6e56;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--accent);
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  border: none;
+  opacity: 0.3;
+}
+.carousel-indicators .active {
+  opacity: 1;
+}
+.carousel-indicators {
+  bottom: -2rem;
+}
+
+/* Carousel wrapper gives space for arrows */
+.carousel-wrapper {
+  padding: 0 60px;
+  position: relative;
+}
+@media (max-width: 576px) {
+  .carousel-wrapper {
+    padding: 0;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+/* ── Skills ── */
+.skill-group {
+  margin-bottom: 1.25rem;
+}
+.skill-group-label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Activities ── */
+.activity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.activity-tag {
+  background: var(--accent-light);
+  color: #085041;
+  border-radius: 20px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ── Project cards ── */
+.proj-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.proj-card-header {
+  background: #0f6e56;
+  color: #fff;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.proj-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.3rem;
+}
+.proj-card-header .proj-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.05rem;
+  margin: 0 0 0.2rem;
+  line-height: 1.25;
+}
+.proj-card-header .proj-meta {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 0;
+}
+.proj-date {
+  font-size: 0.78rem;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+.proj-card-body {
+  padding: 1.25rem 1.75rem;
+  flex: 1;
+}
+.proj-card-body ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.proj-card-body li {
+  margin-bottom: 0.6rem;
+  color: #374151;
+  line-height: 1.55;
+  font-size: 0.93rem;
+}
+.proj-card-body li:last-child {
+  margin-bottom: 0;
+}
+.lang-tag {
+  display: inline-block;
+  background: rgba(15, 110, 86, 0.1);
+  color: var(--accent);
+  border-radius: 6px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--text-primary);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 0.82rem;
+}
+
+hr {
+  border-color: var(--border);
+}
