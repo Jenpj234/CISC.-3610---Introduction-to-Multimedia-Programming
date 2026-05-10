@@ -14,9 +14,9 @@
 | Project | Description | Link |
 |---|---|---|
 | **CyberSafe PWA** | Interactive cybersecurity awareness app | [Launch](https://jenpj234.github.io/CISC.-3610---Introduction-to-Multimedia-Programming/CyberSafe/cyberSafe.html) |
-| **Canvas Cartoon** | Animated scene using HTML5 Canvas API | [Launch](https://jenpj234.github.io/CISC.-3610---Introduction-to-Multimedia-Programming/Cartoons/cartoon.html) |
-| **Words** | Text-to-speech app using Web Speech API | [Launch](https://jenpj234.github.io/CISC.-3610---Introduction-to-Multimedia-Programming/Words/dictionary.html) |
-| **Video Animation** | Multi-layer animation made in Wick Editor | [View](https://jenpj234.github.io/CISC.-3610---Introduction-to-Multimedia-Programming/Video-Animation/animation.html) |
+| **Canvas Cartoon** | Animated scene using HTML5 Canvas API | [Launch](https://jenpj234.github.io/CISC.-3610---Introduction-to-Multimedia-Programming/Projects/Cartoons/cartoon.html) |
+| **Words** | Text-to-speech app using Web Speech API | [Launch](https://jenpj234.github.io/CISC.-3610---Introduction-to-Multimedia-Programming/Projects/Words/dictionary.html) |
+| **Video Animation** | Multi-layer animation made in Wick Editor | [View](https://jenpj234.github.io/CISC.-3610---Introduction-to-Multimedia-Programming/Projects/Video-Animation/animation.html) |
 
 ## Assignments
 
