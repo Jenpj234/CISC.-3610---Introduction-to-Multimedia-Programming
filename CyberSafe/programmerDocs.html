@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programmer Docs — CyberSafe</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="programmerDocs.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="promo.html" class="back-link">← Back to Promo Page</a>
+      <span class="nav-label">Programmer Docs</span>
+    </nav>
+
+    <div class="layout">
+      <aside class="toc">
+        <p class="toc-label">Contents</p>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#file-structure">File Structure</a></li>
+          <li><a href="#json-format">JSON Format</a></li>
+          <li><a href="#add-topic">Adding a Topic</a></li>
+          <li><a href="#new-dataset">Swapping the Dataset</a></li>
+          <li><a href="#service-worker">Service Worker</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <div class="doc-header">
+          <span class="doc-tag">CyberSafe · Documentation</span>
+          <h1>Programmer Guide</h1>
+          <p>
+            How CyberSafe is structured and how to modify or extend the JSON
+            dataset to create a custom learning set.
+          </p>
+        </div>
+
+        <div class="doc-section" id="overview">
+          <h2>Overview</h2>
+          <p>
+            CyberSafe is built with plain HTML5, CSS3, and vanilla JavaScript —
+            no frameworks or build tools required. All topic content is stored
+            in a single <code>data.json</code> file, which the app fetches at
+            runtime and uses to dynamically build the dropdown menu and topic
+            cards.
+          </p>
+          <p>
+            This makes it straightforward to swap in an entirely different
+            dataset without touching any HTML or JavaScript.
+          </p>
+        </div>
+
+        <div class="doc-section" id="file-structure">
+          <h2>File Structure</h2>
+          <div class="file-tree">
+            <div><span class="folder">CyberSafe/</span></div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">cyberSafe.html</span>
+              <span class="note">— main app page</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">cyberSafe.css</span>
+              <span class="note">— all styles</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">cyberSafe.js</span>
+              <span class="note"
+                >— app logic + service worker registration</span
+              >
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">data.json</span>
+              <span class="note">— all topic content ← edit this</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">manifest.json</span>
+              <span class="note">— PWA install config</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">serviceWorker.js</span>
+              <span class="note">— offline caching</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">promo.html</span>
+              <span class="note">— promotional landing page</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">promo.css</span>
+              <span class="note">— styling of promotional landing page</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">programmerDocs.html</span>
+              <span class="note">— programmer documentation</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="file">programmerDocs.css</span>
+              <span class="note">— styling of programmer documentation</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;├── <span class="folder">images/</span>
+              <span class="note">— topic images + app icons + screenshots</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;└── <span class="folder">audio/</span>
+              <span class="note">— topic narration mp3 files</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="doc-section" id="json-format">
+          <h2>JSON Format</h2>
+          <p>
+            The <code>data.json</code> file contains a single
+            <code>topics</code> array. Each object in the array represents one
+            topic card in the app.
+          </p>
+
+          <pre><code><span class="punct">{</span>
+  <span class="key">"topics"</span><span class="punct">: [</span>
+    <span class="punct">{</span>
+      <span class="key">"title"</span><span class="punct">:</span>       <span class="string">"Phishing"</span><span class="punct">,</span>
+      <span class="key">"icon"</span><span class="punct">:</span>        <span class="string">"🎣"</span><span class="punct">,</span>
+      <span class="key">"description"</span><span class="punct">:</span> <span class="string">"What the threat is and how it works."</span><span class="punct">,</span>
+      <span class="key">"prevention"</span><span class="punct">:</span>  <span class="string">"Steps to protect yourself."</span><span class="punct">,</span>
+      <span class="key">"image"</span><span class="punct">:</span>       <span class="string">"images/phishing.jpg"</span><span class="punct">,</span>
+      <span class="key">"audio"</span><span class="punct">:</span>       <span class="string">"audio/phishing.mp3"</span>
+    <span class="punct">}</span>
+  <span class="punct">]</span>
+<span class="punct">}</span></code></pre>
+
+          <h3>Field Reference</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Required</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>title</code></td>
+                <td>string</td>
+                <td>✅ Yes</td>
+                <td>
+                  The name of the topic, shown in the dropdown and card header.
+                </td>
+              </tr>
+              <tr>
+                <td><code>icon</code></td>
+                <td>string</td>
+                <td>✅ Yes</td>
+                <td>
+                  An emoji shown next to the title in the dropdown and card.
+                </td>
+              </tr>
+              <tr>
+                <td><code>description</code></td>
+                <td>string</td>
+                <td>✅ Yes</td>
+                <td>A paragraph explaining what the threat is.</td>
+              </tr>
+              <tr>
+                <td><code>prevention</code></td>
+                <td>string</td>
+                <td>✅ Yes</td>
+                <td>
+                  A paragraph with prevention tips, shown in the green info box.
+                </td>
+              </tr>
+              <tr>
+                <td><code>image</code></td>
+                <td>string</td>
+                <td>⬜ Optional</td>
+                <td>
+                  Relative path to an image file. Card hides the image if
+                  omitted.
+                </td>
+              </tr>
+              <tr>
+                <td><code>audio</code></td>
+                <td>string</td>
+                <td>⬜ Optional</td>
+                <td>
+                  Relative path to an MP3 file. Audio player hides if omitted.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-section" id="add-topic">
+          <h2>Adding a New Topic</h2>
+          <p>
+            To add a topic, open <code>data.json</code> and add a new object
+            inside the <code>topics</code> array. Copy the template below and
+            fill in your content:
+          </p>
+
+          <pre><code><span class="punct">{</span>
+  <span class="key">"title"</span><span class="punct">:</span>       <span class="string">"Your Topic Title"</span><span class="punct">,</span>
+  <span class="key">"icon"</span><span class="punct">:</span>        <span class="string">"🔐"</span><span class="punct">,</span>
+  <span class="key">"description"</span><span class="punct">:</span> <span class="string">"Explain what this topic is about."</span><span class="punct">,</span>
+  <span class="key">"prevention"</span><span class="punct">:</span>  <span class="string">"Explain how to stay safe."</span><span class="punct">,</span>
+  <span class="key">"image"</span><span class="punct">:</span>       <span class="string">"images/your-image.jpg"</span><span class="punct">,</span>
+  <span class="key">"audio"</span><span class="punct">:</span>       <span class="string">"audio/your-audio.mp3"</span>
+<span class="punct">}</span></code></pre>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h4>Add the object to data.json</h4>
+                <p>
+                  Paste the template inside the <code>topics</code> array, after
+                  the last closing <code>}</code> and before the closing
+                  <code>]</code>. Separate it from the previous entry with a
+                  comma.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h4>Add your image</h4>
+                <p>
+                  Save your image to the <code>images/</code> folder and make
+                  sure the filename matches what you wrote in the
+                  <code>image</code> field.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h4>Add your audio</h4>
+                <p>
+                  Save your MP3 to the <code>audio/</code> folder. You can
+                  record your own voice or use a text-to-speech tool like
+                  ElevenLabs or TTSMaker.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">4</div>
+              <div class="step-body">
+                <h4>Reload the app</h4>
+                <p>
+                  Refresh the browser. Your new topic will appear automatically
+                  in the dropdown — no HTML changes needed.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout">
+            💡 Make sure your JSON is valid — a missing comma or unclosed
+            bracket will break the fetch. Use
+            <a href="https://jsonlint.com" target="_blank" style="color: #555"
+              >jsonlint.com</a
+            >
+            to validate before saving.
+          </div>
+        </div>
+
+        <div class="doc-section" id="new-dataset">
+          <h2>Swapping the Dataset</h2>
+          <p>
+            Because the app reads entirely from <code>data.json</code>, you can
+            swap it out for a completely different subject without changing any
+            JavaScript or HTML.
+          </p>
+          <p>
+            For example, to turn CyberSafe into a Marine Life educational app:
+          </p>
+
+          <pre><code><span class="punct">{</span>
+  <span class="key">"topics"</span><span class="punct">: [</span>
+    <span class="punct">{</span>
+      <span class="key">"title"</span><span class="punct">:</span>       <span class="string">"Blue Whale"</span><span class="punct">,</span>
+      <span class="key">"icon"</span><span class="punct">:</span>        <span class="string">"🐋"</span><span class="punct">,</span>
+      <span class="key">"description"</span><span class="punct">:</span> <span class="string">"The blue whale is the largest animal on Earth..."</span><span class="punct">,</span>
+      <span class="key">"prevention"</span><span class="punct">:</span>  <span class="string">"Conservation tip: reduce ocean plastic..."</span><span class="punct">,</span>
+      <span class="key">"image"</span><span class="punct">:</span>       <span class="string">"images/blue-whale.jpg"</span><span class="punct">,</span>
+      <span class="key">"audio"</span><span class="punct">:</span>       <span class="string">"audio/blue-whale.mp3"</span>
+    <span class="punct">}</span>
+  <span class="punct">]</span>
+<span class="punct">}</span></code></pre>
+
+          <p>
+            The only field names that must stay the same are <code>title</code>,
+            <code>icon</code>, <code>description</code>,
+            <code>prevention</code>, <code>image</code>, and
+            <code>audio</code> — since <code>cyberSafe.js</code> reads those
+            specific keys.
+          </p>
+
+          <div class="callout">
+            💡 If you rename the top-level key from <code>"topics"</code> to
+            something else, you'll also need to update the matching reference in
+            <code>cyberSafe.js</code> — look for <code>data.topics</code> on
+            line 2.
+          </div>
+        </div>
+
+        <div class="doc-section" id="service-worker">
+          <h2>Service Worker & Caching</h2>
+          <p>
+            The <code>service-worker.js</code> file caches core assets on
+            install so the app works offline. If you add new files (images,
+            audio, pages), add their paths to the <code>ASSETS</code> array to
+            make them available offline:
+          </p>
+
+          <pre><code><span class="comment">// service-worker.js</span>
+<span class="key">const</span> ASSETS <span class="punct">=</span> <span class="punct">[</span>
+  <span class="string">'/'</span><span class="punct">,</span>
+  <span class="string">'/index.html'</span><span class="punct">,</span>
+  <span class="string">'/cyberSafe.css'</span><span class="punct">,</span>
+  <span class="string">'/cyberSafe.js'</span><span class="punct">,</span>
+  <span class="string">'/data.json'</span><span class="punct">,</span>
+  <span class="string">'/images/your-new-image.jpg'</span><span class="punct">,</span>  <span class="comment">// ← add new files here</span>
+  <span class="string">'/audio/your-new-audio.mp3'</span>
+<span class="punct">]</span><span class="punct">;</span></code></pre>
+
+          <p>
+            After updating the service worker, bump the cache name (e.g.
+            <code>cybersafe-v2</code>) so browsers pick up the new version
+            instead of serving the old cached files.
+          </p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
